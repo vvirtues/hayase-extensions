@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Seadex",
+    "id": "seadex",
+    "version": "0.0.1",
+    "type": "torrent",
+    "accuracy": "high",
+    "ratio": 0,
+    "icon": "https://releases.moe/favicon.png",
+    "update": "gh:hayase-app/extensions",
+    "code": "gh:hayase-app/extensions/seadex.js"
+  },
+  {
+    "name": "AnimeTosho",
+    "id": "animetosho",
+    "version": "0.0.1",
+    "type": "torrent",
+    "accuracy": "high",
+    "ratio": 0,
+    "icon": "https://animetosho.org/inc/favicon.ico",
+    "update": "gh:hayase-app/extensions",
+    "code": "gh:hayase-app/extensions/animetosho.js"
+  },
+  {
+    "name": "AnimeTosho",
+    "id": "animetosho-nzb",
+    "version": "0.0.1",
+    "type": "nzb",
+    "accuracy": "high",
+    "ratio": 0,
+    "icon": "https://animetosho.org/inc/favicon.ico",
+    "update": "gh:hayase-app/extensions",
+    "code": "gh:hayase-app/extensions/animetosho-nzb.js"
+  }
+]
