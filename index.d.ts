@@ -9,9 +9,9 @@ export interface ExtensionConfig {
   accuracy: Accuracy
   ratio?: 'perma' | number
   icon: string // URL to the icon
-  update: string // URL to the config file, can be prefixed with 'gh:' to fetch from GitHub, e.g. 'gh:username/repo' or 'npm:' to fetch from npm, e.g. 'npm:package-name', or a straight url
+  update?: string // URL to the config file, can be prefixed with 'gh:' to fetch from GitHub, e.g. 'gh:username/repo' or 'npm:' to fetch from npm, e.g. 'npm:package-name', or a straight url
   code: string // URL to the extension code, can be prefixed with 'gh:' to fetch from GitHub, e.g. 'gh:username/repo' or 'npm:' to fetch from npm, e.g. 'npm:package-name', a straight url, or file: for inline code
-  options: {
+  options?: {
     [key: string]: {
       type: 'string' | 'number' | 'boolean'
       description: string
