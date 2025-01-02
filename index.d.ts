@@ -30,7 +30,6 @@ export interface TorrentResult {
   accuracy: Accuracy
   hash: string // info hash
   size: number // size in bytes
-  verified: boolean // if it's a verified release, e.g. it's 100% certain it's the correct episode, manually verified by the provider e.g. anidb
   date: Date // date the torrent was uploaded
   type?: 'batch' | 'best' | 'alt'
 }

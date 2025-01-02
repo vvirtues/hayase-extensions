@@ -31,7 +31,7 @@ export default new class SeaDex extends AbstractSource {
         seeders: 0,
         leechers: 0,
         downloads: 0,
-        verified: true
+        accuracy: 'high'
       }
     })
   }

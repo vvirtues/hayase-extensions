@@ -33,7 +33,7 @@ export default new class Tosho extends AbstractSource {
         downloads: entry.torrent_downloaded_count || 0,
         hash: entry.info_hash,
         size: entry.total_size,
-        verified: !!entry.anidb_fid,
+        accuracy: entry.anidb_fid ? 'high' : 'medium',
         type: batch ? 'batch' : undefined,
         date: new Date(entry.timestamp * 1000)
       }
