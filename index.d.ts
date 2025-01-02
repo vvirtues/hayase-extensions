@@ -10,7 +10,7 @@ export interface ExtensionConfig {
   seed: 'perma' | number
   icon: string // URL to the icon
   update: string // URL to the config file, can be prefixed with 'gh:' to fetch from GitHub, e.g. 'gh:username/repo' or 'npm:' to fetch from npm, e.g. 'npm:package-name', or a straight url
-  code: string // URL to the extension code, can be prefixed with 'gh:' to fetch from GitHub, e.g. 'gh:username/repo' or 'npm:' to fetch from npm, e.g. 'npm:package-name', or a straight url
+  code: string // URL to the extension code, can be prefixed with 'gh:' to fetch from GitHub, e.g. 'gh:username/repo' or 'npm:' to fetch from npm, e.g. 'npm:package-name', a straight url, or file: for inline code
   options: {
     [key: string]: {
       type: 'string' | 'number' | 'boolean'
@@ -27,6 +27,7 @@ export interface TorrentResult {
   seeders: number
   leechers: number
   downloads: number
+  accuracy: Accuracy
   hash: string // info hash
   size: number // size in bytes
   verified: boolean // if it's a verified release, e.g. it's 100% certain it's the correct episode, manually verified by the provider e.g. anidb

@@ -1,4 +1,4 @@
-export default class ToshoNZB {
+export default new class ToshoNZB {
   url = atob('aHR0cHM6Ly9mZWVkLmFuaW1ldG9zaG8ub3JnL2pzb24=')
 
   /**
@@ -19,4 +19,4 @@ export default class ToshoNZB {
     const res = await fetch(this.url)
     return res.ok
   }
-}
+}()
