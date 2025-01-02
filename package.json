@@ -1,6 +1,6 @@
 {
   "name": "hayase-extensions",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Extensions for Hayase",
   "main": "index.json",
   "types": "index.d.ts"
