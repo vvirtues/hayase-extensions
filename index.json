@@ -8,7 +8,7 @@
     "ratio": 0,
     "icon": "https://releases.moe/favicon.png",
     "update": "gh:hayase-app/extensions",
-    "code": "gh:hayase-app/extensions/seadex.js"
+    "code": "gh:hayase-app/extensions/seadex"
   },
   {
     "name": "AnimeTosho",
@@ -19,7 +19,7 @@
     "ratio": 0,
     "icon": "https://animetosho.org/inc/favicon.ico",
     "update": "gh:hayase-app/extensions",
-    "code": "gh:hayase-app/extensions/animetosho.js"
+    "code": "gh:hayase-app/extensions/animetosho"
   },
   {
     "name": "AnimeTosho",
@@ -30,6 +30,6 @@
     "ratio": 0,
     "icon": "https://animetosho.org/inc/favicon.ico",
     "update": "gh:hayase-app/extensions",
-    "code": "gh:hayase-app/extensions/animetosho-nzb.js"
+    "code": "gh:hayase-app/extensions/animetosho-nzb"
   }
 ]
