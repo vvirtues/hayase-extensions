@@ -2,20 +2,15 @@ import AbstractSource from './abstract.js'
 
 const QUALITIES = ['1080', '720', '540', '480']
 
-const ANY = 'e*|a*|r*|i*|o*'
-
 export default new class Tosho extends AbstractSource {
   url = atob('aHR0cHM6Ly9mZWVkLmFuaW1ldG9zaG8ub3JnL2pzb24=')
 
   buildQuery ({ resolution, exclusions }) {
-    let query = `&qx=1&q=!("${exclusions.join('"|"')}")`
-    if (resolution) {
-      query += `((${ANY}|"${resolution}") !"${QUALITIES.filter(q => q !== resolution).join('" !"')}")`
-    } else {
-      query += ANY // HACK: tosho NEEDS a search string, so we lazy search a single common vowel
-    }
+    const base = `&qx=1&q=!("${exclusions.join('"|"')}")`
+    if (!resolution) return base
 
-    return query
+    const excl = QUALITIES.filter(q => q !== resolution)
+    return base + `!(*${excl.join('*|*')}*)`
   }
 
   /**
@@ -50,8 +45,6 @@ export default new class Tosho extends AbstractSource {
     const data = await res.json()
 
     if (data.length) return this.map(data)
-    // TODO: this shouldn't really be required anymore? test.
-    if (resolution) return this.single({ anidbEid, exclusions }) // some releases like dvd might be in weird resolutions like 540p
     return []
   }
 
@@ -65,8 +58,6 @@ export default new class Tosho extends AbstractSource {
     const data = /** @type {import('./types').Tosho[]} */(await res.json()).filter(entry => entry.num_files >= episodeCount)
 
     if (data.length) return this.map(data, true)
-    // TODO: this shouldn't really be required anymore? test.
-    if (resolution) return this.batch({ anidbAid, episodeCount, exclusions }) // some releases like dvd might be in weird resolutions like 540p
     return []
   }
 
@@ -80,8 +71,6 @@ export default new class Tosho extends AbstractSource {
     const data = await res.json()
 
     if (data.length) return this.map(data, true)
-    // TODO: this shouldn't really be required anymore? test.
-    if (resolution) return this.movie({ anidbAid, exclusions }) // some releases like dvd might be in weird resolutions like 540p
     return []
   }
 
