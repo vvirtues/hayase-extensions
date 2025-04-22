@@ -6,6 +6,10 @@
     "type": "torrent",
     "accuracy": "high",
     "ratio": 0,
+    "media": "sub",
+    "languages": [
+      "EN"
+    ],
     "icon": "https://releases.moe/favicon.png",
     "update": "gh:hayase-app/extensions",
     "code": "gh:hayase-app/extensions/seadex"
@@ -17,6 +21,10 @@
     "type": "torrent",
     "accuracy": "high",
     "ratio": 0,
+    "media": "sub",
+    "languages": [
+      "EN"
+    ],
     "icon": "https://animetosho.org/inc/favicon.ico",
     "update": "gh:hayase-app/extensions",
     "code": "gh:hayase-app/extensions/animetosho"
@@ -28,6 +36,10 @@
     "type": "nzb",
     "accuracy": "high",
     "ratio": 0,
+    "media": "sub",
+    "languages": [
+      "EN"
+    ],
     "icon": "https://animetosho.org/inc/favicon.ico",
     "update": "gh:hayase-app/extensions",
     "code": "gh:hayase-app/extensions/animetosho-nzb"
