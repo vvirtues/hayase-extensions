@@ -47,6 +47,7 @@ export interface TorrentQuery {
   episodeCount?: number // total episode count for the series
   resolution: '2160' | '1080' | '720' | '540' | '480' | ''
   exclusions: string[] // list of keywords to exclude from searches
+  type?: 'sub' | 'dub'
 }
 
 export type SearchFunction = (query: TorrentQuery, options?: {
