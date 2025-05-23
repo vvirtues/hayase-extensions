@@ -70,7 +70,7 @@ export default new class Tosho extends AbstractSource {
     /** @type {import('./types').Tosho[]} */
     const data = await res.json()
 
-    if (data.length) return this.map(data, true)
+    if (data.length) return this.map(data)
     return []
   }
 
