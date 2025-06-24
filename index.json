@@ -43,5 +43,20 @@
     "icon": "https://animetosho.org/inc/favicon.ico",
     "update": "gh:hayase-app/extensions",
     "code": "gh:hayase-app/extensions/animetosho-nzb"
+  },
+  {
+    "name": "Nyaa (unofficial)",
+    "id": "nyaa",
+    "version": "0.0.1",
+    "type": "torrent",
+    "accuracy": "high",
+    "ratio": 0,
+    "media": "sub",
+    "languages": [
+      "US"
+    ],
+    "icon": "https://nyaa.si/static/favicon.png",
+    "update": "gh:vvirtues/hayase-extensions",
+    "code": "gh:vvirtues/hayase-extensions/nyaa"
   }
 ]
